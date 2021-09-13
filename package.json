@@ -1,25 +1,26 @@
 {
-  "name": "mern-server",
+  "name": "MERN-Social-media-site",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "watch": "nodemon",
-    "seed": "node seeders/seeds.js"
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryma1738/MERN-Social-media-site.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "apollo-server-express": "^3.3.0",
-    "bcrypt": "^4.0.1",
-    "express": "^4.17.1",
-    "faker": "^4.1.0",
-    "graphql": "^15.5.3",
-    "mongoose": "^5.9.9"
+  "bugs": {
+    "url": "https://github.com/ryma1738/MERN-Social-media-site/issues"
   },
+  "homepage": "https://github.com/ryma1738/MERN-Social-media-site#readme",
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "concurrently": "^6.2.1"
   }
 }
